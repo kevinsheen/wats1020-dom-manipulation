@@ -24,12 +24,12 @@ $( document ).ready(function() {
     //      2. Fill the user's first and last name into `div.user-info`.
     //      (NOTE: You do not have to perform any validation on the data as
     //          a base requirement.)
-	$('login-btn').on('click', function(event){
-		console.log(event);
-		$('.form-control').hide(); // or .form-group? 
-		$('.user-info').show();
-	});	
+	
+	$('.btn-sm').click(function(){
+		$('.login-form')
 
+		
+	});
     // TODO: Create a function to listen for clicks on all the "View Details"
     // buttons so that when a user clicks a "View Details" button they see
     // the content contained in the elements with the class "details" in the

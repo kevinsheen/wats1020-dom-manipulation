@@ -25,18 +25,6 @@ $( document ).ready(function() {
     //      (NOTE: You do not have to perform any validation on the data as
     //          a base requirement.)
 
-// $('.view-details').on('click', function(event){
-	//console.log(event);
-	//var targetElement = event.target; 
-	//var container = targetElement.parentElement.parentElement; 
-	//$("container").find(".details").each(function(index, el){
-	//	if ($(el).is(":visible")){
-	//	    $(el).fadeOut();
-	//		targetElement.innerText = "View Details";
-	//	} else {
-	//		$ (el)
-	//};
-// };
 
     // TODO: Create a function to listen for clicks on all the "View Details"
     // buttons so that when a user clicks a "View Details" button they see

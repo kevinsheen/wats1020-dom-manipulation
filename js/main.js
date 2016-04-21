@@ -13,9 +13,11 @@ $( document ).ready(function() {
         greatest: 0,
         total: 0
     };
+	
+	
     // Place all your Javascript code inside this "document ready" function so
     // it does not run until the DOM is ready for Javascript manipulation.
-
+	
     // TODO: Create a function to listen for clicks on the "login" button.
     //      1. When a user clicks the "login" button, hide the login
     //          form elements on the page.
@@ -23,6 +25,18 @@ $( document ).ready(function() {
     //      (NOTE: You do not have to perform any validation on the data as
     //          a base requirement.)
 
+// $('.view-details').on('click', function(event){
+	//console.log(event);
+	//var targetElement = event.target; 
+	//var container = targetElement.parentElement.parentElement; 
+	//$("container").find(".details").each(function(index, el){
+	//	if ($(el).is(":visible")){
+	//	    $(el).fadeOut();
+	//		targetElement.innerText = "View Details";
+	//	} else {
+	//		$ (el)
+	//};
+// };
 
     // TODO: Create a function to listen for clicks on all the "View Details"
     // buttons so that when a user clicks a "View Details" button they see
@@ -33,7 +47,21 @@ $( document ).ready(function() {
     //      3. Toggle visibility of all the elements within that parent with the class `details`.
     //      4. Change the text of the "view details" button to read "hide details" so the user
     //          understands they can hide the text again.
-
+	$('.view-details').on('click', function(event){
+	   console.log(event);
+	   var targetElement = event.target; 
+	   var container = targetElement.parentElement.parentElement; 
+	   $(container).find('.details').each(function(index, el){
+	      if ($(el).is(':visible')){
+			  $(el).fadeOut();
+			  targetElement.innerText = "View Details";
+		  } else {
+			  $(el).fadeIn(); 
+			  targetElement.innerText = "Hide Details";
+		  }
+	   });
+	});
+		
     // TODO: Create a function that listens for clicks on the voting buttons and
     // looks at the `data-vote` attribute on each button to see what was voted for,
     // then determines the updated vote breakdown to adjust the progress bars.
